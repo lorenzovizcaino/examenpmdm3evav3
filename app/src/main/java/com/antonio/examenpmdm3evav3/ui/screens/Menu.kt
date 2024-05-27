@@ -275,7 +275,7 @@ fun AdministrarItems(navController: NavController, viewModel: ItemViewModel) {
                 .fillMaxWidth()
                 .padding(5.dp)
         )
-        
+
         Button(onClick = {
 
 
@@ -288,7 +288,7 @@ fun AdministrarItems(navController: NavController, viewModel: ItemViewModel) {
             viewModel.guardarItemEnFichero(context,nuevoItemSer)
 
             viewModel.set_nombre("")
-            viewModel.set_descr("")
+
         }, modifier = Modifier.fillMaxWidth().padding(5.dp)) {
             Text(text = "Agregar", /*modifier = Modifier.fillMaxWidth()*/)
         }
@@ -301,8 +301,8 @@ fun AdministrarItems(navController: NavController, viewModel: ItemViewModel) {
                     MostrarItem(
                         viewModel=viewModel,
                         objeto=it ,
-                        editNombre = { viewModel.set_nombre(it) },
-                        editDescr = { viewModel.set_descr(it) }
+                        editNombre = { viewModel.set_nombre(it) }
+
                     )
                 }
             }
@@ -317,7 +317,7 @@ fun AdministrarItems(navController: NavController, viewModel: ItemViewModel) {
 fun MostrarItem(
     objeto: ItemSer,
     editNombre: (String) -> Unit,
-    editDescr: (String) -> Unit,
+
     viewModel: ItemViewModel
 ) {
     val context = LocalContext.current

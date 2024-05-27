@@ -44,8 +44,7 @@ class ItemViewModel:ViewModel(){
     var nombre by mutableStateOf("")
         private set
 
-    var descr by mutableStateOf("")
-        private set
+
 
     var selecionado by mutableStateOf(false)
         private set
@@ -72,9 +71,7 @@ class ItemViewModel:ViewModel(){
         this.nombre=nombre
     }
 
-    fun set_descr(descr:String){
-        this.descr=descr
-    }
+
 
     fun set_selecionado(selecionado:Boolean){
         this.selecionado=selecionado
